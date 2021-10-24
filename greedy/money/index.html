@@ -11,15 +11,25 @@
             font-size: 3rem;
             font-weight: bold;
         }
+
+        span {
+            margin: 0 20px;
+            font-weight: bold;
+            font-size: 2rem;
+        }
     </style>
     <body>
         <input type="number" id="input" placeholder="손님에게 줘야할 값" />
         <button id="button" onclick="solution()">구하기</button>
         <hr />
-        <h1 id="500"></h1>
-        <h1 id="100"></h1>
-        <h1 id="50"></h1>
-        <h1 id="10"></h1>
+        <br />
+        <p>거슬러줘야 할 동전의 수</p>
+        <h1 id="h1"></h1>
+        <hr />
+        <span id="span_500"></span>
+        <span id="span_100"></span>
+        <span id="span_50"></span>
+        <span id="span_10"></span>
     </body>
     <script src="./index.js"></script>
 </html>
