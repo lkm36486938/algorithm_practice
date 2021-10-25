@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>1이 될 때까지</title>
+    </head>
+    <style>
+        h1 {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        input {
+            line-height: 2rem;
+            vertical-align: middle;
+            margin-left: 20px;
+        }
+
+        #solution {
+            height: 2rem;
+            width: 10rem;
+            cursor: pointer;
+        }
+
+        span {
+            margin: 0 20px;
+            font-weight: bold;
+            font-size: 2rem;
+        }
+    </style>
+
+    <body>
+        <h1>N: <input type="number" id="N" /></h1>
+        <h1>K: <input type="number" id="K" /></h1>
+        <button id="solution" onclick="solution()">구하기</button>
+        <hr />
+        <br />
+        <span id="result"></span>
+    </body>
+    <script src="./index.js"></script>
+</html>
