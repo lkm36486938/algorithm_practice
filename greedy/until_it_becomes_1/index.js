@@ -6,6 +6,8 @@ function solution() {
     let K = document.getElementById("K").value;
 
     while (true) {
+        if (N == 1) break;
+
         if (N % K == 0) {
             N /= K;
             ++result;
@@ -13,8 +15,6 @@ function solution() {
             N -= 1;
             ++result;
         }
-
-        if (N == 1) break;
     }
 
     let span = document.getElementById("result");
