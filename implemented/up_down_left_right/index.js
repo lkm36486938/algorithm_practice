@@ -22,7 +22,8 @@ rl.on("line", (line) => {
         console.log("이동할 계획을 입력해주세요. (띄어쓰기로 구분)");
     } else if (input.length === 1) {
         input.push(line);
-        let result = solution();
+        // let result = solution();
+        let result = solution2(); // 방향벡터사용
         console.log("정답: ", result);
         rl.close();
     }
@@ -33,6 +34,7 @@ rl.on("close", () => {
     process.exit();
 });
 
+// 방향벡터 미사용
 function solution() {
     let N = input[0];
     let xy = { x: 1, y: 1 };
@@ -64,4 +66,37 @@ function solution() {
     }
 
     return `${xy["x"]} ${xy["y"]}`;
+}
+
+function solution2() {
+    let N = input[0];
+
+    let x = 1,
+        y = 1;
+
+    let plans = input[1].split(" ");
+
+    // 방향벡터
+    let dx = [0, 0, -1, 1],
+        dy = [-1, 1, 0, 0],
+        move_types = ["L", "R", "U", "D"];
+
+    // 이동계획을 하나씩 확인
+    for (let plan of plans) {
+        // 이동 후 좌표 구하기
+        let nx, ny;
+        for (let i = 0; i < move_types.length; i++) {
+            if (plan === move_types[i]) {
+                nx = x + dx[i];
+                ny = y + dy[i];
+            }
+        }
+
+        if (nx < 1 || ny < 1 || nx > N || ny > N) continue;
+
+        x = nx;
+        y = ny;
+    }
+
+    return `${x} ${y}`;
 }
