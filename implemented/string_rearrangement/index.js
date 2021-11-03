@@ -28,6 +28,6 @@ function solution(S) {
         }
     }
     // return str.sort((a, b) => (a > b ? 1 : -1)).join("") + number;
-    // sort는 인수없이 실행하면 내림차순으로됨
+    // sort는 인수없이 실행하면 오름차순으로됨
     return str.sort().join("") + number;
 }
