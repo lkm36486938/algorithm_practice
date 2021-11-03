@@ -27,5 +27,7 @@ function solution(S) {
             number += parseInt(char);
         }
     }
-    return str.sort((a, b) => (a > b ? 1 : -1)).join("") + number;
+    // return str.sort((a, b) => (a > b ? 1 : -1)).join("") + number;
+    // sort는 인수없이 실행하면 내림차순으로됨
+    return str.sort().join("") + number;
 }
