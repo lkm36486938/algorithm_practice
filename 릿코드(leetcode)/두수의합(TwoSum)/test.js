@@ -1,3 +1,8 @@
+/**
+    Runtime 418 ms
+    Memory 39.1 MB
+ */
+
 var twoSum = function (nums, target) {
   let result = [];
 
