@@ -3,6 +3,7 @@
  * @return {number}
  */
 var lengthOfLongestSubstring = function (s) {
+  if(!s) return 0;
   let arr = [];
 
   for (let i = 0; i < s.length; i++) {
