@@ -9,5 +9,5 @@ var addDigits = function (num) {
 };
 
 console.log(addDigits(38));
-console.log(addDigits(0))
-console.log(addDigits(199))
+console.log(addDigits(0));
+console.log(addDigits(199));
